@@ -1,0 +1,46 @@
+:root {
+  --bg: #0b1020;
+  --panel: #10162b;
+  --card: #121a33;
+  --text: #e6e9f5;
+  --muted: #9aa3c7;
+  --accent: #7aa2ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: radial-gradient(1200px 800px at 80% -20%, #1b2550 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.wrap { max-width: 1000px; margin: 0 auto; padding: 24px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+h1 { font-weight: 800; letter-spacing: 0.2px; font-size: clamp(20px, 3vw, 28px); margin: 0; }
+.sub { color: var(--muted); font-size: 14px; }
+
+.panel { background: linear-gradient(180deg, #11193a, var(--panel)); border: 1px solid #1f2a55; border-radius: 16px; padding: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05); }
+.today { display: grid; grid-template-columns: 160px 1fr; gap: 20px; align-items: center; }
+@media (max-width: 640px){ .today { grid-template-columns: 1fr; text-align: center; } }
+
+.moonSVG { width: 160px; height: 160px; }
+.meta { display: grid; gap: 8px; }
+.meta .kvs { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; }
+.kv { background: var(--card); border: 1px solid #1f2a55; border-radius: 12px; padding: 10px 12px; }
+.kv .k { color: var(--muted); font-size: 12px; }
+.kv .v { font-weight: 700; }
+
+.actions { margin-top: 14px; }
+button { cursor: pointer; background: linear-gradient(180deg, #2a3a8a, #243375); color: #fff; border: 1px solid #3a4cb2; padding: 10px 14px; border-radius: 12px; font-weight: 700; letter-spacing: .2px; box-shadow: 0 8px 20px rgba(31,44,120,.35), inset 0 1px 0 rgba(255,255,255,.08); }
+button:hover { filter: brightness(1.05); }
+
+.grid7 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+.card { background: var(--card); border: 1px solid #1f2a55; border-radius: 14px; padding: 12px; display: grid; justify-items: center; gap: 8px; }
+.date { color: var(--muted); font-size: 12px; letter-spacing: .2px; }
+.label { font-weight: 700; text-align: center; }
+.illum { color: var(--muted); font-size: 12px; }
+
+footer { margin-top: 20px; color: var(--muted); font-size: 12px; text-align: center; }
+a { color: var(--accent); text-decoration: none; }
